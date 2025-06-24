@@ -9,86 +9,134 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * The BillDTO class...
  */
-public class BillDTO implements Serializable  {
-	private static final long serialVersionUID = 2931699728946643245L;
+public class BillDTO implements Serializable {
+    private static final long serialVersionUID = 2931699728946643245L;
 
-	/* Attributes section for the DTO */
+    /* Attributes section for the DTO */
 
-	/**
-	 * The name attribute
-	 */
-	private String name;
+    /**
+     * The number attribute
+     */
+    private String number;
 
-	/**
-	 * The surname attribute
-	 */
-	private String surname;
+    /**
+     * The value attribute
+     */
+    private long value;
 
-	/**
-	 * Get the name attribute
-	 */
-	public String getName() {
-		return this.name;
-	}
+    /**
+     * The bill Status attribute
+     */
+    private String status;
 
-	/**
-	 * Set the name attribute
-	 */
-	public void setName(final String name) {
-		this.name = name;
-	}
+    /**
+     * The supplier name attribute
+     */
+    private String supplier;
 
-	/**
-	 * Get the surname attribute
-	 */
-	public String getSurname() {
-		return this.surname;
-	}
+    /**
+     * Get the number attribute
+     */
+    public String getNumber() {
+        return this.number;
+    }
 
-	/**
-	 * Set the surname attribute
-	 */
-	public void setSurname(final String surname) {
-		this.surname = surname;
-	}
+    /**
+     * Set the number attribute
+     */
+    public void setNumber(final String number) {
+        this.number = number;
+    }
 
-	/**
-	 * Indicates whether some other object is "equal to" this one.
-	 */
-	@Override
-	public boolean equals(final Object obj) {
-		if (obj == null) { return false; }
-		if (obj == this) { return true; }
-		if (obj.getClass() != getClass()) {
-			return false;
-		}
-		final BillDTO rhs = (BillDTO) obj;
-		return new EqualsBuilder().appendSuper(super.equals(obj))
-					.append(name, rhs.name)
-					.append(surname, rhs.surname)
-					.isEquals();
-	}
+    /**
+     * Get the value attribute
+     */
+    public long getValue() {
+        return this.value;
+    }
 
-	/**
-	 * Returns a hash code value for the object.
-	 */
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder()
-			.append(this.name)
-			.append(this.surname)
-			.toHashCode();
-	}
+    /**
+     * Set the value attribute
+     */
+    public void setValue(long value) {
+        this.value = value;
+    }
 
-	/**
-	 * Returns a string representation of the object.
-	 * It is important to OBFUSCATE the attributes that are sensitive to show in the representation.
-	 */
-	@Override
-	public String toString() {
-		return new ToStringBuilder(this)
-			.append("name", name)
-			.append("surname", surname)
-			.toString();
-	}
+    /**
+     * Get the bill status attribute
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * Set the bill status attribute
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * Get the supplier name attribute
+     */
+    public String getSupplier() {
+        return supplier;
+    }
+
+    /**
+     * Set the supplier name attribute
+     */
+    public void setSupplier(String supplierName) {
+        this.supplier = supplier;
+    }
+
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     */
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        final BillDTO rhs = (BillDTO) obj;
+        return new EqualsBuilder().appendSuper(super.equals(obj))
+                .append(number, rhs.number)
+                .append(value, rhs.value)
+                .append(status, rhs.status)
+                .append(supplier, rhs.supplier)
+                .isEquals();
+    }
+
+    /**
+     * Returns a hash code value for the object.
+     */
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder()
+                .append(this.number)
+                .append(this.value)
+                .append(this.status)
+                .append(this.supplier)
+                .toHashCode();
+    }
+
+    /**
+     * Returns a string representation of the object.
+     * It is important to OBFUSCATE the attributes that are sensitive to show in the representation.
+     */
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("number", number)
+                .append("value", value)
+                .append("bill status", status)
+                .append("supplier name", supplier)
+                .toString();
+    }
 }
