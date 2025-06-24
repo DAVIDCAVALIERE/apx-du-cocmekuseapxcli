@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transaction xmlns="http://www.w3schools.com" transactionName="CMEKTME1" application="CMEK" version="01" country="CO" language="ES">
-	<paramsIn/>
-	<paramsOut/>
+	<paramsIn>
+		<dto order="1" name="payment" mandatory="1" package="com.bbva.cmek.dto.payments.PaymentDTO" artifactId="CMEKCME1">
+			<dto order="1" name="account" mandatory="0" package="com.bbva.cmek.dto.accounts.AccountDTO" artifactId="CMEKCME2">
+				<parameter order="1" name="id" mandatory="0" type="String" size="20"/>
+			</dto>
+			<dto order="2" name="bill" mandatory="1" package="com.bbva.cmek.dto.payments.BillDTO" artifactId="CMEKCME1">
+				<parameter order="1" name="number" mandatory="0" type="String" size="50"/>
+				<parameter order="2" name="value" mandatory="1" type="Long" size="50"/>
+			</dto>
+		</dto>
+	</paramsIn>
+	<paramsOut>
+		<dto order="1" name="payment" mandatory="1" package="com.bbva.cmek.dto.payments.PaymentDTO" artifactId="CMEKCME1">
+			<dto order="1" name="account" mandatory="0" package="com.bbva.cmek.dto.accounts.AccountDTO" artifactId="CMEKCME2">
+				<parameter order="1" name="id" mandatory="0" type="String" size="20"/>
+			</dto>
+			<dto order="2" name="bill" mandatory="1" package="com.bbva.cmek.dto.payments.BillDTO" artifactId="CMEKCME1">
+				<parameter order="1" name="number" mandatory="0" type="String" size="50"/>
+				<parameter order="2" name="value" mandatory="1" type="Long" size="50"/>
+			</dto>
+			<parameter order="3" name="id" mandatory="0" type="String" size="50"/>
+			<parameter order="4" name=" operationDateTime" mandatory="0" type="String" size="50"/>
+		</dto>
+	</paramsOut>
 	<description>Bill payment</description>
 </transaction>
