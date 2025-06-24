@@ -12,5 +12,10 @@
 	<version>0.0.0</version>
 	<packaging>pom</packaging>
 	<name>LIBRARIES-apx-du-cocmekuseapxcli</name>
-	<modules/>
+	<modules>
+		<module>CMEKRME1</module>
+		<module>CMEKRME1IMPL</module>
+		<module>CMEKRME2</module>
+		<module>CMEKRME2IMPL</module>
+	</modules>
 </project>

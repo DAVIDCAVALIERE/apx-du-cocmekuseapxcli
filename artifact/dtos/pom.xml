@@ -12,5 +12,8 @@
 	<version>0.0.0</version>
 	<packaging>pom</packaging>
 	<name>DTOS-apx-du-cocmekuseapxcli</name>
-	<modules/>
+	<modules>
+		<module>CMEKCME1</module>
+		<module>CMEKCME2</module>
+	</modules>
 </project>

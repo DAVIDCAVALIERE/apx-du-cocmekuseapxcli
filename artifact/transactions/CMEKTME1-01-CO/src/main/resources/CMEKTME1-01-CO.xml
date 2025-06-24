@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="CMEKTME1" application="CMEK" version="01" country="CO" language="ES">
+	<paramsIn/>
+	<paramsOut/>
+	<description>Bill payment</description>
+</transaction>
